@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require "qarnot"
+require "boson/runner"
+require "byebug"
+
+class QarnotRunner < Boson::Runner
+end
+
+qarnot = Qarnot::Auth.new(api_token: "ec8371e4c6858776dbdc95392c1630ad07184c9e5b01209eac27f786ed24f343")
+byebug
+disks = qarnot.disks.list
+
+puts "LOL"
+
+# response = qarnot.disks.create({
+#   description: "my new disk",
+#   locked: false
+# })
+# puts response
