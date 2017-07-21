@@ -5,13 +5,11 @@ module Qarnot
     class Profile < Base
       attr_accessor :name, :constants
 
-      def initialize(params)
-        super params
-
-        update_attributes({
-          name:             params.delete(:name),
-          constants:        params.delete(:constants)
-        })
+      def self.attributes_mapping
+        {
+          name: :name,
+          constants: :constants
+        }
       end
     end
   end
