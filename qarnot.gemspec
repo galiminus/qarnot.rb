@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
 
   gem.files         = `git ls-files -z`.split("\x0")
   gem.executables   = %w(qarnot)
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
   gem.bindir        = 'bin'
 
@@ -27,4 +28,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport', '~> 5.1.2', '>= 5.1.2'
 
   gem.add_development_dependency "byebug"
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "webmock"
 end
