@@ -9,7 +9,6 @@ module Qarnot
         params.symbolize_keys!
 
         @auth = params.delete :auth
-        @uuid = params.delete :uuid
       end
 
       def update_attributes(attributes)

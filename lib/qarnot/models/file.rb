@@ -1,6 +1,8 @@
+require "qarnot/models/base"
+
 module Qarnot
   module Model
-    class File
+    class File < Base
     end
   end
 end

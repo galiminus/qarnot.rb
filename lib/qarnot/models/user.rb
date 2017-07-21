@@ -1,6 +1,8 @@
+require "qarnot/models/base"
+
 module Qarnot
   module Model
-    class User
+    class User < Base
     end
   end
 end
